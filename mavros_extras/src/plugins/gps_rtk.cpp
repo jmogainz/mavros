@@ -68,7 +68,7 @@ private:
 
 		uint8_t seq_u5 = uint8_t(msg->header.seq & 0x1F) << 3;
 
-		if (msg->data.size() > 4 * max_frag_len) {
+	if (msg->data.size() > 4 * max_frag_len) {
 			ROS_FATAL("gps_rtk: RTCM message received is bigger than the maximal possible size.");
 			return;
 		}
